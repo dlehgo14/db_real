@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  .timeline
+    form#join-form(action='/auth/join' method='post')
+      .input-group
+        label(for='join-id') 아이디
+        input#join-id(name='id')
+
+      .input-group
+        label(for='join-password') 비밀번호
+        input#join-password(name='password')
+
+      .input-group
+        label(for='join-name') 이름
+        input#join-name(type='text' name='name')
+      .input-group
+        label(for='join-age') 나이
+        input#join-age(type='number' name='age')
+      .input-group
+        label(for='join-phone') 전화번호
+        input#join-phone(type='text' name='phone')
+      .input-group
+        label(for='join-career') 경력년수
+        input#join-career(type='number' name='career')
+      .input-group
+        label(for='join-major') 전공
+        input#join-major(type='text' name='major')
+      .input-group
+        label(for='join-languageskill') 언어능숙도 (python=3, java=5...이런식으로 작성하세요)
+        input#join-languageskill(type='text' name='languageskill')
+      .input-group
+        label(for='join-fl') 프리랜서입니까?
+        input#join-fl(type='checkbox' name='isfreelancer')
+
+
+      if joinError
+        .error-message= joinError
+      button#join-btn.btn(type='submit') 회원가입

@@ -1,0 +1,18 @@
+<%- include ./layout/header.ejs %>
+<div class="timeline">
+    <form id="join-form" action="/auth/join" method="post">
+        <div class="input-group"><label for="join-id">아이디</label><input id="join-id" name="id" /></div>
+        <div class="input-group"><label for="join-password">비밀번호</label><input id="join-password" name="password" /></div>
+        <div class="input-group"><label for="join-name">이름</label><input id="join-name" type="text" name="name" /></div>
+        <div class="input-group"><label for="join-age">나이</label><input id="join-age" type="number" name="age" /></div>
+        <div class="input-group"><label for="join-phone">전화번호</label><input id="join-phone" type="text" name="phone" /></div>
+        <div class="input-group"><label for="join-career">경력년수</label><input id="join-career" type="number" name="career" /></div>
+        <div class="input-group"><label for="join-major">전공</label><input id="join-major" type="text" name="major" /></div>
+        <div class="input-group"><label for="join-languageskill">언어능숙도 (python=3, java=5...이런식으로 작성하세요)</label><input id="join-languageskill" type="text" name="languageskill" /></div>
+        <div class="input-group"><label for="join-fl">프리랜서입니까?</label><input id="join-fl" type="checkbox" name="isfreelancer" /></div>
+        <button class="btn" id="join-btn" type="submit">회원가입</button>
+    </form>
+</div>
+
+<%- include ./layout/footer.ejs %>
+
